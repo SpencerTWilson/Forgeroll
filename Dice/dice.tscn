@@ -1,0 +1,25 @@
+[gd_scene load_steps=6 format=3 uid="uid://8osmi4ourspb"]
+
+[ext_resource type="Texture2D" uid="uid://cga7n1wn72cj4" path="res://Art/dice/bases/Basic_Base.png" id="1_8ba0r"]
+[ext_resource type="Script" path="res://Dice/dice_scene.gd" id="2_s0sy4"]
+[ext_resource type="Resource" uid="uid://c8uxrvjqch2x1" path="res://Dice/basic_dice.tres" id="3_yyja4"]
+[ext_resource type="Texture2D" uid="uid://coma7lqlochp0" path="res://Art/dice/faces/Basic_Attack.png" id="4_v6d24"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_41srg"]
+size = Vector2(11, 11)
+
+[node name="dice" type="Sprite2D" groups=["Dice"]]
+scale = Vector2(4, 4)
+texture = ExtResource("1_8ba0r")
+script = ExtResource("2_s0sy4")
+current_dice = ExtResource("3_yyja4")
+
+[node name="face" type="Sprite2D" parent="."]
+texture = ExtResource("4_v6d24")
+
+[node name="button" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="button"]
+shape = SubResource("RectangleShape2D_41srg")
+
+[connection signal="input_event" from="button" to="." method="_on_button_input_event"]

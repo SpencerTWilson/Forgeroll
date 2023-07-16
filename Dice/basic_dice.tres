@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Dice" load_steps=3 format=3 uid="uid://c8uxrvjqch2x1"]
+
+[ext_resource type="Texture2D" uid="uid://cga7n1wn72cj4" path="res://Art/dice/bases/Basic_Base.png" id="1_vltqg"]
+[ext_resource type="Script" path="res://Dice/Dice.gd" id="2_usws6"]
+
+[resource]
+script = ExtResource("2_usws6")
+name = "basic_dice"
+base_image = ExtResource("1_vltqg")
+sides = Array[int]([0, 0, 1, 1, 2, 2])
