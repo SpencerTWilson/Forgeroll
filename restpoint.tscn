@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://cvwmmqijsplso"]
+
+[ext_resource type="Script" path="res://restpoint.gd" id="1_gp8qs"]
+
+[node name="Restpoint" type="Node2D" groups=["zone"]]
+position = Vector2(298, 324)
+script = ExtResource("1_gp8qs")
+size = 75.0

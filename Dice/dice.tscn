@@ -8,18 +8,18 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_41srg"]
 size = Vector2(11, 11)
 
-[node name="dice" type="Sprite2D" groups=["Dice"]]
+[node name="Dice" type="Sprite2D" groups=["Dice"]]
 scale = Vector2(4, 4)
 texture = ExtResource("1_8ba0r")
 script = ExtResource("2_s0sy4")
 current_dice = ExtResource("3_yyja4")
 
-[node name="face" type="Sprite2D" parent="."]
+[node name="Face" type="Sprite2D" parent="."]
 texture = ExtResource("4_v6d24")
 
-[node name="button" type="Area2D" parent="."]
+[node name="Button" type="Area2D" parent="."]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="button"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Button"]
 shape = SubResource("RectangleShape2D_41srg")
 
-[connection signal="input_event" from="button" to="." method="_on_button_input_event"]
+[connection signal="input_event" from="Button" to="." method="_on_button_input_event"]

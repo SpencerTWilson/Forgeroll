@@ -1,24 +1,17 @@
 [gd_scene load_steps=3 format=3 uid="uid://b7jcga1m6m8av"]
 
 [ext_resource type="PackedScene" uid="uid://8osmi4ourspb" path="res://Dice/dice.tscn" id="1_lbqov"]
-[ext_resource type="Script" path="res://Dice Manager.gd" id="1_qqet4"]
+[ext_resource type="PackedScene" uid="uid://cvwmmqijsplso" path="res://restpoint.tscn" id="2_gt85f"]
 
 [node name="Main" type="Node"]
 
-[node name="Dice Manager" type="Panel" parent="."]
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-script = ExtResource("1_qqet4")
+[node name="Dice" parent="." instance=ExtResource("1_lbqov")]
+position = Vector2(587, 327)
 
-[node name="dice" parent="Dice Manager" instance=ExtResource("1_lbqov")]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-grow_horizontal = 2
-grow_vertical = 2
+[node name="Restpoint" parent="." groups=["Zone"] instance=ExtResource("2_gt85f")]
+
+[node name="Restpoint2" parent="." instance=ExtResource("2_gt85f")]
+position = Vector2(467, 285)
+
+[node name="Restpoint3" parent="." instance=ExtResource("2_gt85f")]
+position = Vector2(428, 326)
